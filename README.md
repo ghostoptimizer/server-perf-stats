@@ -10,9 +10,9 @@
 
 ```bash
 docker run --rm -it \
- -v "$PWD": /workdir \
+ -v "$PWD":/workdir \
  -w /workdir \
- ubuntu: 24.04 \
+ ubuntu:24.04 \
  bash
 
 apt-get update
