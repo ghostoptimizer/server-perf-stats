@@ -23,8 +23,9 @@ chmod +x server-stats.sh
 ./server-stats.sh -m /home 
 
 -- Baking it into a Docker image --
-> Create a Dcokerfile alongside your script
-
+> If you want a completely self-contained image so you never have to
+  re-install bc, create a simple Dockerfile alongside your script
+-----------------------------------------------------------------------
 FROM ubuntu:24.04
 
 RUN apt-get update && apt-get install -y bc coreutils procps util-linux
@@ -36,6 +37,7 @@ RUN chmod +x server-stats.sh
 
 ENTRYPOINT ["./server-stats.sh"]
 CMD ["-m", "/"]
+-----------------------------------------------------------------------
 
 - Then build and run
 
