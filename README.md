@@ -39,7 +39,7 @@ ENTRYPOINT ["./server-stats.sh"]
 CMD ["-m", "/"]
 -----------------------------------------------------------------------
 
-- Then build and run
+> Then build and run
 
 docker build -t server-stats .
 docker run --rm server-stats -m /home
