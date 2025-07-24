@@ -9,7 +9,11 @@
 ## Usage
 
 ```bash
-docker run --rm -it \ -V "$PWD": /workdir \ -w/workdir \ ubuntu: 24.04 \ bash
+docker run --rm -it \
+ -v "$PWD": /workdir \
+ -w /workdir \
+ ubuntu: 24.04 \
+ bash
 
 apt-get update
 apt-get install -y bc
