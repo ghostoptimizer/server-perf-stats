@@ -39,7 +39,8 @@ ENTRYPOINT ["./server-stats.sh"]
 CMD ["-m", "/"]
 -----------------------------------------------------------------------
 
-> Then build and run
-
+> Build on your host
 docker build -t server-stats .
+
+> Now execute it while still in the host
 docker run --rm server-stats -m /home
