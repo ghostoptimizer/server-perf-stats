@@ -44,3 +44,7 @@ docker build -t server-stats .
 
 > Now execute it while still in the host
 docker run --rm server-stats -m /home
+
+> Too see all top 5 processes:
+
+You’ll need to run the script on a host or in a container with a richer PID namespace (for example, with Docker’s ```--pid=host```) so that system daemons, background services, and any other containers’ processes show up in your ps output.
