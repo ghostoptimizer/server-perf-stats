@@ -11,6 +11,7 @@
 ```bash
 -- One-off manual testing in Docker --
 ======================================
+
 docker run --rm -it \
  -v "$PWD":/workdir \
  -w /workdir \
@@ -25,8 +26,10 @@ chmod +x server-stats.sh
 
 -- Baking it into a Docker image --
 ===================================
+
 > If you want a completely self-contained image so you never have to
   re-install bc, create a simple Dockerfile alongside your script:
+
 -----------------------------------------------------------------------
 FROM ubuntu:24.04
 
